@@ -1,0 +1,12 @@
+# Bloquear acceso directo a la raíz del proyecto; usar /public como document root.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
+
+# Denegar archivos sensibles si se accede directamente
+<FilesMatch "(^\.env|\.sql$|\.log$|\.ini$|\.lock$|composer\.(json|lock)$)">
+    Require all denied
+</FilesMatch>
+Options -Indexes

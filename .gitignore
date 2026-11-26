@@ -1,0 +1,32 @@
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Dependencias / vendor
+/vendor/
+/node_modules/
+
+# Logs y almacenamiento runtime
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos sensibles
+*.pem
+*.key
+*.p12
+*.crt
+*.sql.dump
+*.bak
