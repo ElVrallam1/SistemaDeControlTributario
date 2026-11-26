@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vista previa - Reporte Diario</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <style>
+    .preview-banner{background:#fff7ed;border:1px solid #fdba74;color:#9a3412;padding:12px 14px;border-radius:12px;margin-bottom:16px;font-size:.9rem}
+    .section-title{margin:18px 0 10px;font-size:.92rem;font-weight:700;color:#8b1e1e;border-bottom:1px solid #eadfdf;padding-bottom:6px}
+    .form-grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    @media(max-width:900px){.form-grid-4{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:560px){.form-grid-4{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar"><div class="brand"><div class="kicker">SENIAT</div><h1>Control Tributario</h1><p>Región Libertador · Plaza Venezuela</p></div>
+    <nav class="nav"><div class="nav-section">Control</div><a class="active" href="#"><span class="icon">☰</span> Reporte diario</a></nav>
+  </aside><div class="overlay"></div>
+  <div class="main">
+    <header class="topbar"><div class="topbar-left"><div><h2>Reporte diario</h2><p class="subtitle">Vista previa del formato real</p></div></div></header>
+    <main class="content">
+      <div class="preview-banner"><strong>Vista previa estática (Fase 1):</strong> refleja el nuevo formato real de Reporte Diario. El sistema real guarda en PostgreSQL, recalcula el total RIF en servidor y exporta <code>.xlsx/.csv</code> con totales.</div>
+      <div class="card mb-24">
+        <div class="toolbar"><div><h3 class="card-title" style="margin:0">Reporte diario</h3><p class="card-sub">Formato operativo Plaza Venezuela</p></div><a class="btn" href="#">+ Nuevo reporte</a></div>
+        <div class="table-wrap"><table class="table"><thead><tr><th>Fecha</th><th>Dependencia</th><th>RIF total</th><th>Asistencia</th><th>Sucesiones atend.</th><th>Sucesiones ing.</th><th>Solv. sucesiones</th><th>Multas notif.</th></tr></thead>
+          <tbody><tr><td><strong>25/11/2026</strong></td><td>Plaza Venezuela</td><td>42</td><td>68</td><td>5</td><td>3</td><td>2</td><td>1</td></tr></tbody></table></div>
+      </div>
+      <div class="card">
+        <div class="card-header"><div><h3 class="card-title">Nuevo reporte diario</h3><p class="card-sub">Campos alineados al Excel real</p></div></div>
+        <div class="section-title">Datos generales</div>
+        <div class="form-grid-4"><div class="field"><label>Fecha</label><input type="date" value="2026-11-25"></div><div class="field"><label>Dependencia</label><input value="Plaza Venezuela"></div></div>
+        <div class="section-title">Vivienda y copias</div>
+        <div class="form-grid-4"><div class="field"><label>Solicitudes vivienda recibidas</label><input type="number" value="0"></div><div class="field"><label>Registros vivienda entregados</label><input type="number" value="0"></div><div class="field"><label>Solicitud copias certificadas</label><input type="number" value="0"></div><div class="field"><label>Copias certificadas entregadas</label><input type="number" value="0"></div></div>
+        <div class="section-title">RIF contribuyentes atendidos (desglose)</div>
+        <div class="form-grid-4"><div class="field"><label>INSC PN</label><input type="number" value="0"></div><div class="field"><label>ACT PN</label><input type="number" value="0"></div><div class="field"><label>INSC PJ</label><input type="number" value="0"></div><div class="field"><label>ACT PJ</label><input type="number" value="0"></div><div class="field"><label>INSC SUC</label><input type="number" value="0"></div><div class="field"><label>ACT SUC</label><input type="number" value="0"></div><div class="field"><label>INSC EMP</label><input type="number" value="0"></div><div class="field"><label>ACT EMP</label><input type="number" value="0"></div><div class="field"><label>INSC GOB</label><input type="number" value="0"></div><div class="field"><label>ACT GOB</label><input type="number" value="0"></div><div class="field"><label>INSC CC</label><input type="number" value="0"></div><div class="field"><label>ACT CC</label><input type="number" value="0"></div></div>
+        <div class="section-title">Asistencia, sucesiones y otros</div>
+        <div class="form-grid-4"><div class="field"><label>Asistencia contribuyentes</label><input type="number" value="0"></div><div class="field"><label>Sucesiones atendidos</label><input type="number" value="0"></div><div class="field"><label>Sucesiones ingresadas</label><input type="number" value="0"></div><div class="field"><label>Solvencias sucesiones entregadas</label><input type="number" value="0"></div><div class="field"><label>Multas notificadas</label><input type="number" value="0"></div><div class="field"><label>Papel seguridad anulado</label><input type="number" value="0"></div></div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
